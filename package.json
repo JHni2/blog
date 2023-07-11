@@ -23,6 +23,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "react-multi-carousel": "^2.8.4"
+    "@tailwindcss/typography": "^0.5.9",
+    "react-markdown": "^8.0.7",
+    "react-multi-carousel": "^2.8.4",
+    "remark-gfm": "^3.0.1"
   }
 }
