@@ -1,5 +1,6 @@
 import { readFile } from 'fs/promises';
 import path from 'path';
+import { cache } from 'react';
 
 export type Post = {
   title: string;
@@ -20,12 +21,13 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
   return getAllPosts().then((posts) => posts.filter((post) => !post.featured));
 }
 
-export async function getAllPosts(): Promise<Post[]> {
+// 한 번 렌더링된 사이클 내에서만 cache값을 사용해 성능 개선
+export const getAllPosts = cache(() => {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   return readFile(filePath, 'utf-8')
     .then<Post[]>(JSON.parse)
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)));
-}
+});
 
 export async function getPostData(fileName: string): Promise<PostData> {
   const filePath = path.join(process.cwd(), 'data', 'posts', `${fileName}.md`);
