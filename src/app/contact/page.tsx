@@ -1,4 +1,5 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+import { SiNotion } from 'react-icons/si';
 import ContactForm from '../componenets/ContactForm';
 
 export default function ContactPage() {
@@ -7,7 +8,7 @@ export default function ContactPage() {
       icon: <AiFillGithub />,
       url: 'https://github.com/JHni2',
     },
-    { icon: <AiFillLinkedin />, url: 'https://meteor-rainstorm-fce.notion.site/58f26f8d459b4cefbfd5818fd11fba68?pvs=4' },
+    { icon: <SiNotion />, url: 'https://meteor-rainstorm-fce.notion.site/58f26f8d459b4cefbfd5818fd11fba68?pvs=4' },
   ];
 
   return (
