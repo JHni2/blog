@@ -1,4 +1,4 @@
-import { EmailData } from './eamil';
+import { EmailData } from './email';
 
 export async function sendContactEmail(eamil: EmailData) {
   const response = await fetch('/api/contact', {
