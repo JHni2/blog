@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import { AiFillGithub } from 'react-icons/ai';
 import { SiNotion } from 'react-icons/si';
 import ContactForm from '../componenets/ContactForm';
+
+export const metadata: Metadata = {
+  title: 'Contact Me',
+  description: 'JH에게 메일 보내기',
+};
 
 export default function ContactPage() {
   const LINKS = [

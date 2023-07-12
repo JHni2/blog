@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
 import Hero from '../componenets/Hero';
 
-export default function AboutPage() {
-  const TITLE_CLASS = 'text-2xl font-bold text-gray-800 my-2';
+export const metadata: Metadata = {
+  title: 'About Me',
+  description: 'JH 소개',
+};
 
+const TITLE_CLASS = 'text-2xl font-bold text-gray-800 my-2';
+export default function AboutPage() {
   return (
     <>
       <Hero />
